@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "skills": {
+    "pinia": {
+      "source": "antfu/skills",
+      "sourceType": "github",
+      "computedHash": "8e8346fac8cb76d6f186462b712352d5a651c9c049076ea73559f47210c874ef"
+    },
+    "pinia-colada-skilld": {
+      "source": "harlan-zw/vue-ecosystem-skills",
+      "sourceType": "github",
+      "computedHash": "1827c54fea54f7ea9eecaa740199c4d28334b240c9e33912f2eb2d325760cc59"
+    }
+  }
+}
