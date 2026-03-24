@@ -1,48 +1,61 @@
 # Testing Setup and Strategy
 
-## Summary
+## Stack
 
-**No testing framework is configured.** There are no unit, integration, or e2e tests.
+| Tool | Version | Purpose |
+|---|---|---|
+| `vitest` | ^4.1.1 | Test runner |
+| `@nuxt/test-utils` | ^4.0.0 | Nuxt-aware mounting helpers |
+| `@vue/test-utils` | ^2.4.6 | Low-level Vue component utilities |
+| `happy-dom` | ^20.8.7 | DOM environment for tests |
 
-From `CLAUDE.md`: _"No linter or test runner is configured."_
+## Running Tests
 
-## Current State
-
-| Area | Status |
-|---|---|
-| Test framework | None |
-| Test files | None |
-| Test scripts | None in `package.json` |
-| Config files | None (`vitest.config.ts`, etc.) |
-| Linter | None (no ESLint/Prettier) |
-| Coverage | Not measured |
-
-## Available Scripts
-
-```json
-{
-  "build": "nuxt build",
-  "dev": "nuxt dev",
-  "generate": "nuxt generate",
-  "preview": "nuxt preview"
-}
+```bash
+npm test          # watch mode
+npm run test:run  # single run (CI)
 ```
-Manual testing via `npm run dev` and `npm run preview`.
 
-## Code Quality Without Tests
+## Configuration
 
-- **TypeScript**: Full type coverage in components and utilities
-- **Content Schema Validation**: Zod schemas validate frontmatter via `@nuxt/content`
-- **Error Handling**: Explicit 404 handling in catch-all routes
-- **Nuxt DevTools**: Enabled (`devtools: { enabled: true }`)
+**`vitest.config.ts`** — uses `defineVitestConfig` from `@nuxt/test-utils/config` with `environment: 'nuxt'`. This boots a Nuxt context so auto-imports and `UAlert`/other Nuxt UI components resolve correctly.
 
-## If Tests Are Added
+## Test Location & Naming
 
-Recommended stack for Nuxt 4:
-- **Unit/Component**: `vitest` + `@vue/test-utils` — Nuxt's recommended, fast, Vue-aware
-- **E2E**: `Playwright` (or Cypress) — browser automation, headless for CI
+- Test files live in `tests/` mirroring the `app/` structure:
+  - `tests/components/` — component tests
+  - `tests/pages/` — page-level tests (future)
+- File naming: `*.test.ts`
 
-Conventions to follow if implemented:
-- Test files: `tests/` or `__tests__/`, named `*.test.ts` or `*.spec.ts`
-- Add `test` script to `package.json`
-- Add `vitest.config.ts` at project root
+## Writing Tests
+
+Use `mountSuspended` from `@nuxt/test-utils/runtime` for components that may use async setup or Nuxt composables:
+
+```typescript
+import { describe, it, expect } from 'vitest'
+import { mountSuspended } from '@nuxt/test-utils/runtime'
+import MyComponent from '~/components/MyComponent.vue'
+
+describe('MyComponent', () => {
+  it('renders slot content', async () => {
+    const wrapper = await mountSuspended(MyComponent, {
+      slots: { default: 'Hello' },
+    })
+    expect(wrapper.text()).toContain('Hello')
+  })
+})
+```
+
+**Path alias**: `~` resolves to `app/` (Nuxt 4 `srcDir`). Use `~/components/Foo.vue`, not `~/app/components/Foo.vue`.
+
+## Existing Tests
+
+| File | What it covers |
+|---|---|
+| `tests/components/Alert.test.ts` | Slot rendering, default color, custom color prop |
+
+## Red-Green-Refactor Pattern
+
+1. **Red** — write a failing test describing the desired behaviour
+2. **Green** — write the minimum code to make it pass
+3. **Refactor** — clean up while keeping tests green (`npm run test:run`)
