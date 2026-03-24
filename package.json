@@ -1,0 +1,19 @@
+{
+  "name": "roundliving-com",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "dependencies": {
+    "@iconify-json/lucide": "^1.2.97",
+    "@nuxt/content": "^3.12.0",
+    "@nuxt/ui": "^4.5.1",
+    "better-sqlite3": "^12.6.2",
+    "nuxt": "^4.4.2",
+    "tailwindcss": "^4.2.1"
+  }
+}
