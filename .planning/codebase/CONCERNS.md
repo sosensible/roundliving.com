@@ -57,9 +57,6 @@
 **Counter component unused**
 - `app/components/Counter.vue` is referenced in `getting-started.md` demo content but not used in any live page. Dead bundle weight.
 
-**Orphaned draft pages**
-- `content/info/about.md` (`status: draft`) and `content/info/test.md` (`status: draft`) are leftover development content. `test.md` references a non-existent image `/social/my-post.png`.
-
 **Thin article content**
 - `content/articles/` contains only `getting-started.md`. The index page implies a browsable library but there's nothing to browse.
 
@@ -129,9 +126,7 @@
 
 ## Quick Wins
 
-1. Delete `content/info/test.md` (orphaned draft with broken image ref)
-2. Decide on `content/info/about.md` — publish or remove
-3. Remove or repurpose `app/components/Counter.vue`
+1. Remove or repurpose `app/components/Counter.vue`
 4. Replace hardcoded `#10b981` with Tailwind `theme(colors.emerald.500)` or CSS variable
 5. Set absolute `baseURL` in `nuxt.config.ts` for proper OG URLs
 6. Update README with actual site structure and how to add content
