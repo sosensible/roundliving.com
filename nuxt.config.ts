@@ -9,5 +9,8 @@ export default defineNuxtConfig({
     preference: 'system',
   },
   devtools: { enabled: true },
-  compatibilityDate: '2024-04-03',
+  compatibilityDate: '2025-05-15',
+  nitro: {
+    preset: 'cloudflare_pages',
+  },
 })
