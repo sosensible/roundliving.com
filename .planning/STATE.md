@@ -10,12 +10,18 @@
 
 None.
 
+## Completed Phases
+
+**Phase 01 — Cloudflare Deployment** ✅ (2026-03-25)
+- Site live at https://roundliving-com.pages.dev
+- GitHub Actions deploys on push to main
+- D1 database: roundliving-content
+
 ## Active Phase
 
-**Phase 01 — Cloudflare Deployment**
-- Status: In progress (1/3 plans complete)
-- Plans: PLAN-01.md ✅ | PLAN-02.md 🔲 | PLAN-03.md 🔲
-- Next: PLAN-02 — Cloudflare account setup + D1 provisioning (requires human action)
+**Phase 02 — SEO Foundation**
+- Status: Not started
+- Plans: Not yet created (run `/gsd:plan-phase 02`)
 
 ## Key Decisions
 
