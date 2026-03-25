@@ -4,4 +4,4 @@ compatibility_date = "2025-05-15"
 [[d1_databases]]
 binding = "DB"
 database_name = "roundliving-content"
-database_id = "REPLACE_WITH_REAL_D1_DATABASE_ID"
+database_id = "4e969778-5fde-4c53-aab2-9dfef9d878a6"
