@@ -7,7 +7,8 @@
       "Bash(npm install:*)",
       "Bash(npm run:*)",
       "WebFetch(domain:hub.nuxt.com)",
-      "WebFetch(domain:content.nuxt.com)"
+      "WebFetch(domain:content.nuxt.com)",
+      "Bash(npx wrangler:*)"
     ]
   }
 }
