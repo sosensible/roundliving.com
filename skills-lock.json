@@ -1,6 +1,51 @@
 {
   "version": 1,
   "skills": {
+    "code-review": {
+      "source": "anthropics/knowledge-work-plugins",
+      "sourceType": "github",
+      "computedHash": "2b1ac29c8d03ecdd6dbb9d0ebc8cdb05965151bedceed36f262546785b3123bc"
+    },
+    "gsd": {
+      "source": "ctsstc/get-shit-done-skills",
+      "sourceType": "github",
+      "computedHash": "680208c668bd9ce5135c2b6b21c200406ef04a45450b3246adb3a573f11ab40c"
+    },
+    "gsd:debug": {
+      "source": "ctsstc/get-shit-done-skills",
+      "sourceType": "github",
+      "computedHash": "b54b55a919f7b07a9f3f0bad223a1d95e2327bb24e882f8bd881ea527673893c"
+    },
+    "gsd:discuss-phase": {
+      "source": "ctsstc/get-shit-done-skills",
+      "sourceType": "github",
+      "computedHash": "52a88f50bc01253a88c26ee4480795110a2c1b78222c37fd79b03b9033518f8f"
+    },
+    "gsd:execute-phase": {
+      "source": "ctsstc/get-shit-done-skills",
+      "sourceType": "github",
+      "computedHash": "3f276842d98b6b826beefb35ce4af0162733471450ba44b29e0bac02068e5ea7"
+    },
+    "gsd:map-codebase": {
+      "source": "ctsstc/get-shit-done-skills",
+      "sourceType": "github",
+      "computedHash": "b6bfd9f77157b7c19e67214b2f630504da2799e55c364ad09541ddfa6905fb73"
+    },
+    "gsd:plan-phase": {
+      "source": "ctsstc/get-shit-done-skills",
+      "sourceType": "github",
+      "computedHash": "c3017b39e1b3f59e6502fddb64547a911ac9d16a21815eab855e783ec476fad0"
+    },
+    "gsd:progress": {
+      "source": "ctsstc/get-shit-done-skills",
+      "sourceType": "github",
+      "computedHash": "9cd87bc42b15a9d4456f7252a43b1ea42e736a641a916d63f1585ae480aa5a6f"
+    },
+    "gsd:verify-work": {
+      "source": "ctsstc/get-shit-done-skills",
+      "sourceType": "github",
+      "computedHash": "73d548131833d1463285344fb1d28404de07593243e1b8f2f3c836fefa9a75b9"
+    },
     "nuxt": {
       "source": "antfu/skills",
       "sourceType": "github",
@@ -30,6 +75,11 @@
       "source": "antfu/skills",
       "sourceType": "github",
       "computedHash": "f72b54618560c53d65740515ded5bb833750c4574dbe961fd21f022bd2b31a74"
+    },
+    "write-spec": {
+      "source": "anthropics/knowledge-work-plugins",
+      "sourceType": "github",
+      "computedHash": "6ec065dfac46311b9550499997630c62b9748598e3128056ddf58a789162517e"
     }
   }
 }

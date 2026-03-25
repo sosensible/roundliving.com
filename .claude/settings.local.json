@@ -3,7 +3,11 @@
     "allow": [
       "WebSearch",
       "Bash(gh api:*)",
-      "Bash(npx skills:*)"
+      "Bash(npx skills:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "WebFetch(domain:hub.nuxt.com)",
+      "WebFetch(domain:content.nuxt.com)"
     ]
   }
 }
